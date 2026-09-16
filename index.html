@@ -223,7 +223,7 @@
               <div class="row"><span class="lbl">Opérateur</span><span class="val" id="ho-op">Nightjet</span></div>
             </div>
 
-            <button type="button" class="btn-primary" id="btn-leave" style="width:100%">Ouvrir Nightjet</button>
+            <a class="btn-primary" id="btn-leave" style="width:100%;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box" href="https://www.nightjet.com/en/ticket-buchen?utm_source=couchette" target="_blank" rel="noopener noreferrer">Ouvrir Nightjet</a>
             <button type="button" class="btn-secondary" id="btn-stay" style="width:100%;margin-top:10px">Rester sur Couchette</button>
 
             <p class="trust-note">
@@ -282,9 +282,6 @@
       </nav>
 
       <div class="toast" id="toast" role="status"></div>
-
-      <div class="external-flash" id="external-flash" role="dialog" aria-label="Simulation site opérateur">
-        <div class="op-logo" id="external-op-name">NIGHTJET</div>
         <p>
           Ancienne simulation — le CTA ouvre désormais le vrai site opérateur.
         </p>
@@ -293,6 +290,6 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=deeplink2"></script>
 </body>
 </html>

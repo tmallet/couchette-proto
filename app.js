@@ -487,7 +487,9 @@ function renderHandoff() {
   $("#ho-when").textContent = `${r.depart} → ${r.arrive} · ${r.nights}`;
   $("#ho-op").textContent = r.operator;
 
-  $("#btn-leave").textContent = `Ouvrir ${r.operator}`;
+  const leave = $("#btn-leave");
+  leave.textContent = `Ouvrir ${r.operator}`;
+  leave.setAttribute("href", bookingURLForRoute(r));
 }
 
 function renderFavoris() {
@@ -556,17 +558,6 @@ function bindFavCards() {
       goTo("detail");
     });
   });
-}
-
-function openOperatorBooking() {
-  const r = getRoute(state.selectedRouteId);
-  const url = bookingURLForRoute(r);
-  // Real external handoff for smoke CTA (Nightjet / European Sleeper)
-  const win = window.open(url, "_blank", "noopener,noreferrer");
-  if (!win) {
-    // Popup blocked — same-tab fallback
-    window.location.assign(url);
-  }
 }
 
 function init() {
@@ -644,12 +635,8 @@ function init() {
   });
   $("#cta-operator").addEventListener("click", () => goTo("handoff"));
 
-  $("#btn-leave").addEventListener("click", () => openOperatorBooking());
+  // btn-leave is an <a target=_blank> — href set in renderHandoff
   $("#btn-stay").addEventListener("click", () => goTo("detail"));
-  $("#btn-flash-back").addEventListener("click", () => {
-    $("#external-flash").classList.remove("show");
-    goTo("explore");
-  });
 
   // Favoris segments
   $$(".seg-btn").forEach((b) => {
