@@ -35,7 +35,7 @@ Sur mobile ou fenêtre étroite (< 440px), le cadre téléphone disparaît et le
 1. **Explore** — sélectionner une ligne sur la carte ou dans la liste → ouvre la **fiche**.
 2. Filtres (cabine, durée, Interrail) : filtrage client-side de la liste **et** des traits sur la carte.
 3. Sur la fiche : choisir une cabine → **Continuer sur [Nightjet | European Sleeper]** → **3a Handoff**.
-4. Sur le handoff : **Ouvrir [opérateur]** simule le deep-link (écran flash « site opérateur ») — utile pour valider le wording CTA / funnel landing.
+4. Sur le handoff : **Ouvrir [opérateur]** ouvre le site opérateur (Nightjet ticket-buchen / European Sleeper) (écran flash « site opérateur ») — utile pour valider le wording CTA / funnel landing.
 5. **Favoris** (nav bas) → **3b** ; cœur sur une fiche pour sauver ; toggle alerte ventes.
 
 Données d’exemple : Paris→Vienne, Bruxelles→Berlin, Amsterdam→Prague, Paris→Berlin, Munich→Rome, Zurich→Vienne.
@@ -44,7 +44,7 @@ Données d’exemple : Paris→Vienne, Bruxelles→Berlin, Amsterdam→Prague, P
 
 - **Démo produit / design** : enchaîner 1 → 2 → 3a pour montrer le job « découvrir la nuit → choisir une cabine → sortir chez l’opérateur ».
 - **Alignement landing** : vérifier cohérence ton, promesse « nuit only », et CTA de sortie (deep-link) avec la page marketing.
-- **Smoke CTA deep-link** : le bouton handoff ne charge pas de vrai site ; il valide le **message** et le **moment** du handoff (pas de compte / paiement dans Couchette).
+- **Smoke CTA deep-link** : le bouton handoff ouvre les URLs smoke Nightjet / European Sleeper ; il valide le **message** et le **moment** du handoff (pas de compte / paiement dans Couchette).
 
 Hors scope (volontaire) : compte, paiement, social, waitlist, build natif.
 
