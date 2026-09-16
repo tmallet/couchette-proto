@@ -52,16 +52,21 @@ Hors scope (volontaire) : compte, paiement, social, waitlist, build natif.
 
 ```
 .
-├── index.html      # Shell + 4 écrans
-├── styles.css      # Look iOS dark / navy / gold
-├── app.js          # Nav, filtres, favoris, handoff
-├── README.md
-└── screenshots/    # Captures PNG (si présentes)
+├── index.html         # Shell + 4 écrans
+├── styles.css         # @import des parts (CSS complet)
+├── styles-part1.css
+├── styles-part2.css
+├── app.js             # charge app-part1 + app-part2
+├── app-part1.js
+├── app-part2.js
+└── README.md
 ```
+
+> Note : `styles.css` / `app.js` sont des chargeurs ; le contenu HF est dans les fichiers `*-part*.css|js` (découpe pour le push GitHub).
 
 ## Captures
 
-Disponibles sous `screenshots/` (si présentes dans le dépôt) :
+Non incluses dans ce dépôt (PNG binaires non poussés via MCP). Disponibles en local sous `screenshots/` si générées :
 - `01-explore.png` — carte + liste
 - `02-fiche.png` — trajet / cabine + CTA
 - `03a-handoff.png` — pont deep-link opérateur
